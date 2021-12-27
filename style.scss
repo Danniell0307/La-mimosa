@@ -1,0 +1,758 @@
+@import url('http://fonts.cdnfonts.com/css/louis-george-cafe');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+/*-----VARIABLES-------*/
+
+$Beis: #F3EFCC;
+$Beis-black: #ECE7B4;
+$Green: #95c03d;
+$Green-Black: #556d25;
+
+/*------RESET-----*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+//    &::-webkit-scrollbar{
+//        width: 12px;
+//        height: 200px;
+//        background-color: transparent;  
+//      }
+
+//    &::-webkit-scrollbar-thumb {
+//        width: 2px;
+//        background-color: #2d3a14;
+//        border-radius: 10px;
+//  } 
+
+        
+}
+
+
+/*---------------BOTON SOCIAL------------------*/
+
+
+ .img-menu{
+     display: none;
+   }
+  
+   .img-menu{
+     display: none;
+   }
+  
+   .menu-container{
+     display: none;
+   }
+  
+   #btn-mas{
+     display: none;
+   }
+  
+   .container{
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     z-index: 30;
+
+
+     
+   }
+  
+   .redes a, .icon-plus, .icon-cancel-1 {
+     display: block;
+     text-decoration: none;
+     background-color: #000;
+     color: #fff;
+     width: 55px;
+     height: 55px;
+     line-height: 55px;
+     text-align: center;
+     border-radius: 50%;
+     box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.4)
+    //  transition: all 500ms ease;
+   }
+
+  
+   .redes a:hover {
+     background-color: #95c03d ;
+     color: #000;
+   }
+  
+   .redes a{
+     margin-bottom: -15px;
+     opacity: 0;
+     visibility: hidden;
+     transition: all 1s;
+   }
+  
+   #btn-mas:checked~ .redes a{
+     margin-bottom: 20px;
+     opacity: 1;
+     visibility: visible;
+     
+     
+     
+   }
+  
+   .icon-plus{
+     cursor: pointer;
+     font-size: 20px;
+     transition: background-color 1s, color 1s, transform 100ms;
+     
+    
+    }
+  
+   .icon-plus:hover {
+     cursor: pointer;
+     background-color: #95c03d;
+     color: #000;
+     font-size: 20px;
+   }
+  
+   .icon-plus:active {
+     cursor: pointer;
+     background-color: #95c03d;
+     color: #000;
+     font-size: 20px;
+   }
+
+
+
+
+
+
+   .icon-cancel-1{
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 1s, color 1s, transform 100ms;
+   }
+ 
+  .icon-cancel-1:hover {
+    cursor: pointer;
+    background-color: #95c03d;
+    color: #000;
+    font-size: 20px;
+  }
+ 
+  .icon-cancel-1:active {
+    cursor: pointer;
+    background-color: #95c03d;
+    color: #000;
+    font-size: 20px;
+  }
+
+
+   
+
+/*-----------------------------NAVEGACION----------------------------*/
+
+
+
+
+.container-navegation{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 60px;
+    background-color: $Beis;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    
+    
+    /*--------LOGO----------*/
+
+    & .img-container{
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        
+
+        & .img-logo{
+            width: 150px;
+            margin-top: -15px;
+        }
+    }
+
+    /*----------ICONO MENU-----------*/
+
+    & .icon-menu{
+        font-size: 30px;
+        cursor: pointer;
+        
+
+        @media (min-width: 768px){
+            display: none;
+        }  
+    }
+
+    & .icon-cancel{
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+    /*------------NAV----------------*/
+
+
+    & .nav-container{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+         width: 100%;
+         height: 400px;
+         transform: translateY(-230px);
+         background-color: $Beis;
+         border-radius: 0 0 5% 5%;
+         z-index: -11;
+        // border-top: 1px solid $Green-Black;
+        transition: transform .5s;
+
+
+        &.nav-show{
+            transform: translateY(230px);
+        }
+
+         & .enlace{
+            text-decoration: none;
+            color: #000;
+            font-family: 'teko';
+            font-size: 20px;
+
+            &:hover{
+                color: $Green-Black;
+            }
+
+            @media (min-width: 768px){
+                &::before{
+                    position: absolute;
+                    content: '';
+                    height: 2px;
+                    width: 0px;
+                    background-color: $Green-Black;
+                    bottom: 0;
+                    right: 20;
+                    transition: width .5s;
+                }
+
+                &:hover::before{
+                    width: 35px;
+                }
+            }
+         }
+
+        & .enlace-largo {
+            @media (min-width: 768px){
+                &::before{
+                    position: absolute;
+                    content: '';
+                    height: 2px;
+                    width: 0px;
+                    background-color: $Green-Black;
+                    bottom: 0;
+                    left: 20;
+                }
+
+                &:hover::before{
+                    width: 55px;
+                }
+            }
+        }
+
+        & .enlace-conocenos{
+            @media (min-width: 768px){
+                &::before{
+                    position: absolute;
+                    content: '';
+                    height: 2px;
+                    width: 0px;
+                    background-color: $Green-Black;
+                    bottom: 0;
+                    left: 20;
+                }
+
+                &:hover::before{
+                    width: 65px;
+                }
+            }
+        }
+
+
+         @media (min-width: 768px){
+            display: flex;
+            width: 50%;
+            height: 30px;
+            position: relative;
+            flex-direction: row;
+            align-items: right;
+            justify-content: space-evenly;
+            background-color: transparent;
+            transform: translateY(0);
+            z-index: 2;
+            border: none;
+         }
+     }
+
+
+     
+
+     
+
+}
+
+/*-----------------------------------------IMG-INICIO-------------------------------------*/
+
+.titulo-container{
+    & .container-img-inicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 320px;
+        background-image: linear-gradient(hsla(80, 51%, 25%, 0.678), hsla(80, 92%, 31%, 0.534)), url(img/lamimosa.jpeg);
+        background-position: center;
+        background-size: cover;
+        z-index: 2;
+    
+        @media (min-width: 768px){
+            height: 450px;
+        }
+     }
+
+     & .titulo-h2{
+        font-family: teko;
+        font-size: 50px;
+        color: #fff;
+
+        @media (min-width: 768px){
+            font-size: 100px;
+        }
+     }
+
+
+     & .h3-inicio{
+         position: relative;
+         width: 290px;
+        font-family: 'teko';
+        font-size: 18px;
+        color: #000;
+        background-color: #fff;
+        padding: 10px 0 10px 10px;
+        border-radius: 10px;
+     }
+
+       & span {
+         position: absolute;
+         right:  0;
+         width: 0;
+         margin-right: -0px;
+         background-color: white;
+         border-left: 2px solid #000;
+          
+         animation: maquina 5s infinite alternate steps(44);
+
+         @keyframes maquina {
+            from {
+              width: 98%;
+            }
+            to {
+              width: 0%;
+            }
+          }
+         }    
+
+}
+    
+
+
+
+/*------------------------------------CONOCENOS-------------------------------------------*/
+
+.section-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+
+    & .h3-container2{
+        position: relative;
+        text-align: center;
+        font-family: sans-serif;
+        z-index: -1;
+
+        & .h3-titulo{
+            font-weight: lighter;
+        }
+
+        & .h2-titulo::before{
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            position: absolute;
+            bottom: 0;
+        }
+
+        & .h2-titulo::after{
+            content: '';
+            height: 5px;
+            width: 100%;
+            background-color: #000;
+            position: absolute;
+            top: 53px;
+            left: 0;
+        }
+
+
+    }
+
+    & .img-sn{
+        margin: 20px 20px 0 20px;
+        width: 300px;
+        border-radius: 10px;
+    }
+
+
+    & .sobre-nosotros-article{
+        margin: 40px;
+        text-align: justify;
+        font-family: 'Louis George Café', 'Work Sans', sans-serif;
+
+        @media (min-width: 768px){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        & .sobre-nosotros-container{
+            @media (min-width: 768px){
+                width: 55%;
+            }
+        }
+    }
+
+
+    & .img-sn-container{
+        text-align: center;
+
+        @media (min-width: 768px){
+            width: 45%;
+        }
+
+        
+    }
+
+    
+}
+
+
+/*------------------------------CARTA----------------------------------------------------------*/
+
+.carta-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $Beis-black;
+    padding-top: 10px;
+
+
+    & .h3-carta{
+        font-family: sans-serif;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    & .h3-carta2{
+        position: relative;
+        font-family: sans-serif;
+        font-size: 30px;
+        
+
+        &::before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            bottom: 0;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background-color: #000;
+            bottom: -10px; 
+            left: 0;
+        }
+    }
+
+    & .container-p{
+        margin: 20px;
+        text-align: justify;
+        font-family: 'Louis George Café', 'Work Sans', sans-serif;
+    }
+
+    & .form-container{
+        margin-top: 15px;
+        text-align: center;
+        
+        
+
+        & a input{
+            width: 110px;
+            height: 42px;
+            border: 5px solid #000;
+            background-color: $Beis-black;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: box-shadow .5s;
+
+            &:hover{
+                -moz-box-shadow: 0px 15px 11px -9px rgba(0,0,0,0.67);
+                box-shadow: 0px 15px 11px -9px rgba(0,0,0,0.67);
+            }
+        }
+    }
+
+    @media (min-width: 768px){
+        margin-top: 40px;
+    }
+}
+
+
+/*-------------------------------------------CONTACTO---------------------------------------*/
+
+.container-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    
+    & .contacto-container{
+        position: relative;
+        font-size: 27px;
+        font-family: sans-serif;
+
+        &::before{
+            position: absolute;
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            bottom: 0;
+        }
+
+        &::after{
+            position: absolute;
+            content: '';
+            height: 5px;
+            width: 100%;
+            background-color: #000;
+            bottom: -10px;
+            left: 0;
+        }
+    }
+
+    & .container-flex{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        /*---------DIRECCIÓN--------*/
+
+        & .direction-container .h4-container .h4-direccion{
+            font-family: sans-serif;
+            font-size: 17px;
+        }
+
+        & .direction-container .directionp-container .parrafo-direccion,
+        .telefono-container .felefono-p-container .felefono-p,
+        .Horario-container .horario-p-container .paragraph-horario{
+            margin-top: 5px;
+            font-family: 'Louis George Café', 'Work Sans', sans-serif;
+        }
+
+        /*----------TELÉFONO-----------*/
+
+        & .telefono-container .telefono-container-h4 .telefono-h4{
+            margin-top: 20px;
+            font-family: sans-serif;
+            font-size: 17px;
+        }
+
+        /*-------------HORARIO-------------*/
+
+        & .Horario-container .Horario-container-h4 .Horario-h4{
+            margin-top: 20px;
+            font-family: sans-serif;
+            font-size: 17px;
+        }
+    }  
+}
+
+
+
+/*-----------------------------------------CARTA-------------------------------------*/
+
+
+
+/*------------DESCARGAR-----------*/
+
+.descargar-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    & input{
+            width: 110px;
+            height: 42px;
+            border: 3px solid #000;
+            background-color: $Beis-black;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: box-shadow .5s;
+            margin-bottom: 20px;
+
+            &:hover{
+                -moz-box-shadow: 0px 15px 11px -9px rgba(0,0,0,0.67);
+                box-shadow: 0px 15px 11px -9px rgba(0,0,0,0.67);
+            }
+    }
+}
+
+
+
+/*----------------------SELECT------------------------------*/
+
+
+.select-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+    
+
+    & .select{
+        width: 300px;
+        height: 50px;
+        padding: 0 20px;
+        font-family: teko;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+        background-color: $Beis-black;
+        -webkit-appearance: none;
+        background-image: url(img/1x/outline_expand_more_black_24dp.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: right;
+        cursor: pointer;
+        
+        
+        
+        &.arrow-reverse{
+            background-image: url(img/1x/outline_expand_less_black_24dp.png)
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+        
+
+        
+    }
+}
+
+
+/*-------------------------MENU----------------------------------*/
+
+
+
+.menu{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 40px 15px 20px 15px;
+    
+
+    & h3{
+        position: relative;
+        font-family: sans-serif;
+        margin: 15px 0;
+
+           &::before{
+            position: absolute;
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: $Green-Black;
+            bottom: 0;
+            left: 0;
+           }
+
+           &::after{
+            position: absolute;
+            content: '';
+            height: 5px;
+            width: 100%;
+            background-color: $Green-Black;
+            top: 25px;
+            left: 0;
+           }
+
+           @media (min-width:768px){
+            text-align: center;
+        }
+    }
+
+    & p{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        border-bottom: 1px solid $Green-Black;
+        font-weight: bold;
+        font-family: 'Louis George Café', 'Work Sans', sans-serif;
+
+        & span{
+            color: $Green;
+        }
+
+    
+
+    }
+
+    @media (min-width:768px){
+        margin: 10px 100px 20px 100px;
+    }
+
+    
+}
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container-navegation">
+            <div class="img-container">
+                <img src="img/logo.png" alt="" class="img-logo">
+            </div>
+            <div class="icon-menu" id="menu_id"></div>
+            <div class="" id="cross-id"></div>
+            <nav class="nav-container" id="nav_id">
+                <a href="index.html" class="enlace">Inicio</a>
+                <a href="index.html" class="enlace enlace-conocenos">Conócenos</a>
+                <a href="index.html" class="enlace">Carta</a>
+                <a href="index.html" class="enlace enlace-largo">Contacto</a>
+            </nav>
+        </div>
+        <div class="titulo-container">
+            <div class="container-img-inicio">
+                <h2 class="titulo-h2">La Mimosa</h2>
+            </div>
+            
+        </div>
+    </header>
+    <section>
+        <div class="select-container">
+            <select name="" id="select-id" class="select" onchange="onChangeSelect();">
+                <option value="0">Todo</option>
+                <option value="1" >Cafetería</option>
+                <option value="2" >Bebidas & Refrescos</option>
+                <option value="3" >Batidos & Smothies</option>
+                <option value="4" >Alcochol , Cervezas & Vino</option>
+                <option value="5" >Pulguitas & Bocatas</option>
+                <option value="6" >Piadina</option>
+                <option value="7" >Hamburguesas</option>
+                <option value="8" >Sandwiches</option>
+                <option value="9" >Para picar</option>
+            </select>
+        </div>
+    </section>
+    <section >
+        <div id="all">
+            <div >
+                <div id="cafeteria">
+                    <div class="menu">
+                        <div>
+                            <h3 class="h3-carta">Cafetería</h3>
+                            <p>Café solo <span>5€</span></p>
+                            <p>Cortado natural<span>5€</span></p>
+                            <p>Bon Bon<span>5€</span></p>
+                            <p>Café con leche<span>5€</span></p>
+                            <p>Capuchino<span>5€</span></p> 
+                            <p>Capuchino XL<span>5€</span></p>
+                            <p>Café descafeinado<span>5€</span></p>
+                            <p>Carajillo<span>5€</span></p>
+                            <p>Barraquito<span>5€</span></p>
+                            <p>Barraquito XL<span>5€</span></p>
+                            <p>Leche y Leche<span>5€</span></p>
+                            <p>Leche y Leche XL<span>5€</span></p>
+                            <p>Café americano<span>5€</span></p>
+                            <p>Chocolate caliente<span>5€</span></p>
+                            <p>Cola Cao<span>5€</span></p>
+                            <p>Infusiones y Té<span>5€</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="bebidas">
+                   <div class="menu">
+                    <div>
+                        <h3>Bebidas y Refrescos</h3>
+                        <p>Agua natural 0,50 l<span>5€</span></p>
+                        <p>Agua natural 1,5 l<span>5€</span></p>
+                        <p>Agua con gas 0,50 l <span>5€</span></p>
+                        <p>Zumo de naranja <span>5€</span></p>
+                        <p>Appletiser<span>5€</span></p> 
+                        <p>Coca Cola (Original, Zero)<span>5€</span></p>
+                        <p>Fanta (Limón, Naranja)<span>5€</span></p>
+                        <p>Sprite<span>5€</span></p>
+                        <p>Tonica - Tonic water<span>5€</span></p>
+                        <p>Nestea<span>5€</span></p>
+                        <p>Aquarius<span>5€</span></p>
+                        <p>Zumos varios sabores<span>5€</span></p>
+                    </div>
+                    </div>
+                </div>
+                <div id="batidos" >
+                    <div class="menu">
+                        <div>
+                            <h3>Batidos y Smothies</h3>
+                            <p>Helado con nata<span>5€</span></p>
+                            <p>Fruta - Fruit 100% natural<span>5€</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="alcochol" >
+                    <div class="menu">
+                        <div>
+                            <h3>Alcochol</h3>
+                            <p>Martini blanco<span>5€</span></p>
+                            <p>Aperol Spritz<span>5€</span></p>
+                            <p>Gin Tonic<span>5€</span></p>
+                            <p>Gin Tonic Tanqueray<span>5€</span></p>
+                            <h3>Cervezas</h3>
+                            <p>Caña Estrella Galicia<span>5€</span></p> 
+                            <p>Jarra Estrella Galicia<span>5€</span></p>
+                            <p>1906 Reserva Especial<span>5€</span></p>
+                            <p>1906 Red Ale <span>5€</span></p>
+                            <p>Estrella Galicia Especial<span>5€</span></p>
+                            <p>Dorada Sin /limón<span>5€</span></p>
+                            <p>Dorada Pilsen<span>5€</span></p>
+                            <p>Heineken <span>5€</span></p>
+                            <h3>Copas de Vino</h3>
+                            <p>Tinto<span>5€</span></p>
+                            <p>Blanco<span>5€</span></p>
+                            <p>Blanco afrutado<span>5€</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="pulgaditas" >
+                    <div class="menu">
+                        <div>
+                            <h3>Pulguitas y Bocatas</h3>
+                            <p>Jamón y queso<span>5€</span></p>
+                            <p>Pata asada<span>5€</span></p>
+                            <p>Serrano<span>5€</span></p>
+                            <p>Pollo mechado<span>5€</span></p>
+                            <p>Vegetariano<span>5€</span></p> 
+                        </div>
+                    </div>
+                </div>
+                <div id="piadina" >
+                    <div class="menu">
+                        <div>
+                            <h3>Piadina</h3>
+                            <p>Jamón y queso<span>5€</span></p>
+                            <p>Serrano<span>5€</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hamburguesas" >
+                    <div class="menu">
+                        <div>
+                            <h3>Hamburguesas</h3>
+                            <p>Clasica<span>5€</span></p>
+                            <p>Clasica con papas fritas<span>5€</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="sandwiches" >
+                    <div class="menu">
+                        <div>
+                            <h3>Sandwiches</h3>
+                            <p>Mixto<span>5€</span></p>
+                            <p>Mechado de pollo<span>5€</span></p>
+                            <p>Vegetariano<span>5€</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="picar" >
+                    <div class="menu">
+                        <div>
+                            <h3>Para Picar</h3>
+                            <p>Croquetas caseras<span>5€</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="descargar-container">
+            <form action="">
+                <a href="pdf/mimosa.pdf" download="La-Mimosa.pdf"> <input type="button" value="Descargar" class="form-carta"></a>
+            </form>
+        </div>
+    </section>
+    <script src="main-carta.js"></script>
+</body>
+</html>
